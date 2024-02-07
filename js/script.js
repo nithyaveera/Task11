@@ -1,3 +1,4 @@
+//fetch countries data from restcountries
 async function restcountriesdata() {
   let res =await fetch ("https://restcountries.com/v2/all")
   let data =await res.json()
@@ -99,6 +100,7 @@ async function restcountriesdata() {
  })
   
 }
+//fetch weather data from openweather app
 async function weatherfun(country) {
   let lat = country.latlng && country.latlng.length > 0 ? country.latlng[0] : 'Nil';
   let lon = country.latlng && country.latlng.length > 1 ? country.latlng[1] : 'Nil';
@@ -110,6 +112,7 @@ async function weatherfun(country) {
 }
 restcountriesdata()
 
+// create html element
 let bodyy = document.createElement("div")
 bodyy.classList.add("container-fluid")
 document.body.append(bodyy)
