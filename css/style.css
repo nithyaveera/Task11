@@ -1,0 +1,45 @@
+*{
+    background-color: #3d1562;
+}
+.card-body,.card-text,.card-text>h6{
+    background:linear-gradient(90deg,#bf69c2,#c6a7d4,#bf69c2);
+    text-align: center;
+}
+#cardhead{
+    text-align: center;
+    background: linear-gradient(80deg,#f5bb06,#f7e7fb) !important;
+    font-weight: 800;
+}
+#title{
+    padding-bottom: 2vh
+}
+.card-text{
+    margin-top: 3%;
+    position: relative;
+    button{
+        margin-top: 10%;
+        padding: 8px;
+        border-radius:10px 10px;
+        background: linear-gradient(50deg,#0b1251,#1558a4,#0b1251);
+        color: white;
+
+    }
+}
+#weathercon{
+    padding:1% 5%;
+    width: 50%;
+    position: absolute;
+    top:30%;
+    left:77%;
+    background: linear-gradient(90deg,wheat,white,wheat);
+    box-shadow: 1px 1px 7px 1px black;
+    border-radius: 20px ;
+    z-index: 3;
+}
+#weathercon>p{
+    background: linear-gradient(90deg,wheat,white,wheat);
+}
+#back{
+    padding: 3px 8px;
+    margin-top:0%;
+}
