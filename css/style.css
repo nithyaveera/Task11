@@ -13,9 +13,11 @@
 #title{
     padding-bottom: 2vh
 }
+.card-body{
+    position:relative;
+}
 .card-text{
     margin-top: 3%;
-    position: relative;
     button{
         margin-top: 10%;
         padding: 8px;
@@ -29,8 +31,8 @@
     padding:1% 5%;
     width: 50%;
     position: absolute;
-    top:15%;
-    left:77%;
+    top:20%;
+    left:50%;
     background: linear-gradient(90deg,wheat,white,wheat);
     box-shadow: 1px 1px 7px 1px black;
     border-radius: 20px ;

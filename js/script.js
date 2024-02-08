@@ -61,14 +61,21 @@ async function restcountriesdata() {
     cardtext.append(btn)
 
     let divcontainer = document.createElement("div")
-    divcontainer.style.display ="none"
+    divcontainer.style.display = "none"
     divcontainer.setAttribute("id", "weathercon")
     cardtext.append(divcontainer)
 
     btn.addEventListener("click", async () => {
       let weatherforcounry = await weatherfun(country)
-       divcontainer.innerHTML=" "
-          divcontainer.style.display ="block"
+      divcontainer.innerHTML = " "
+      if (divcontainer.style.display == "block") {
+        divcontainer.style.display = "none"
+         btn.innerText = "Click for Weather"
+        
+      }
+      else {
+        divcontainer.style.display = "block"
+         btn.innerText = "Cancel"
         let temp = document.createElement("p")
         temp.innerText = `Temperature :${weatherforcounry.main.temp}`
         divcontainer.append(temp)
@@ -79,21 +86,12 @@ async function restcountriesdata() {
 
         let pre = document.createElement("p")
         pre.innerText = `Pressure :${weatherforcounry.main.pressure}`
-          divcontainer.append(pre)
+        divcontainer.append(pre)
         
-          let visible = document.createElement("p")
-          visible.innerText = `Visibility:${weatherforcounry.visibility}`
-          divcontainer.append(visible)
-
-          let backbn = document.createElement("button")
-      backbn.innerText = "Go Back"
-      backbn.setAttribute("id","back")
-      divcontainer.append(backbn)
-      backbn.addEventListener("click", () => {
-          if (divcontainer.style.display == "block") {
-         divcontainer.style.display ="none"
-        } 
-        })
+        let visible = document.createElement("p")
+        visible.innerText = `Visibility:${weatherforcounry.visibility}`
+        divcontainer.append(visible)
+      }
       })
   
 
